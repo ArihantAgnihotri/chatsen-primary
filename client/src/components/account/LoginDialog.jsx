@@ -85,13 +85,16 @@ const LoginDialog = () => {
         PaperProps={{ sx: dialogStyle }}
     >
         <Component>
-            {/* <Container> */}
-            <h1 className='title'>
-      <span className='title-chat'>CHAT</span><span className='title-sen'>SEN</span>
-    </h1>
-            {/* </Container> */}
+            <h1 className='title'> <span className='title-chat'>CHAT</span><span className='title-sen'>SEN</span></h1>
+            <Box style={{ position: 'absolute', top : '20%', left : '20%'}} >
+                    <h1 className='type-animation'>Connect with friends</h1>           
+            </Box>
+
+            <Box style={{ position: 'absolute', top : '50%', left : '32%'}} >
+                    <h1 className='type-animation small'>One click Login/Register</h1>           
+            </Box>
             
-            <Box style={{ position: 'absolute', top : '40%', left : '38%'}}>
+            <Box style={{ position: 'absolute', top : '60%', left : '35%'}}>
                     
                         <GoogleLogin
                             buttonText=""

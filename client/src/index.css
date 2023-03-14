@@ -24,8 +24,11 @@ code {
 }
 
 
+
+/* TITLE ANIMATION */
+
 .title {
-  color: #00818A;
+  color: #00818a;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
@@ -41,14 +44,54 @@ h1 span {
 .title:hover .title-chat{
   letter-spacing: 25px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #51ffc2;
+  -webkit-text-stroke-color: #000000;
 }
 .title:hover .title-sen {
   letter-spacing: 25px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #66ff00;
+  -webkit-text-stroke-color: #000000;
 }
 .title:hover span {
-  color: #00929c;
-  text-shadow: 0 0 10px #66ff0099, 0 0 20px #3b8f03a4, 0 0 40px #00000058;
+  color: #00a6b1;
+}
+
+
+
+/* Typing animation text */
+
+.type-animation {
+  
+  color: #00818a;
+  font-weight: bold!important;
+  font-family: "Anonymous Pro", monospace!important;
+  letter-spacing: 7px!important;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 100%, 50%);
+  white-space: nowrap;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+  
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.small{
+  font-size: 20px;
+  letter-spacing: 0 !important;
+
 }
