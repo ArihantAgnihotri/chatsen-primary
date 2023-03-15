@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 
 import { MoreVert } from '@mui/icons-material';
+import PersonIcon from '@mui/icons-material/Person';
 import { Menu, MenuItem, styled } from '@mui/material';
 
 import { googleLogout } from '@react-oauth/google';
@@ -13,8 +14,8 @@ import { clientId } from '../../../constants/data';
 import InfoDrawer from '../../drawer/Drawer';
 
 const MenuOption = styled(MenuItem)`
-    font-size: 14px
-    padding: 15px 60px 5px 24px;
+    font-size: 14px;
+    padding: 0px 24px 0px 24px;
     color: #4A4A4A;
 `;
 
@@ -73,7 +74,7 @@ const HeaderMenu = () => {
                     horizontal: 'right',
                 }}
             >
-                <MenuOption onClick={() => { handleClose(); toggleDrawer()}}>Profile</MenuOption>
+                <MenuOption onClick={() => { handleClose(); toggleDrawer()}}><PersonIcon /> Profile</MenuOption>
                 <MenuOption onClick={() => { handleClose(); }}>
                 {/* { showlogoutButton ?
                     <Logout
