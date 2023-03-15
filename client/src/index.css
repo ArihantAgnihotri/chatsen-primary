@@ -28,7 +28,7 @@ code {
 /* TITLE ANIMATION */
 
 .title {
-  color: #00818a;
+  color: #004d80;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
@@ -52,7 +52,7 @@ h1 span {
   -webkit-text-stroke-color: #000000;
 }
 .title:hover span {
-  color: #00a6b1;
+  color: #0074c2;
 }
 
 
@@ -61,12 +61,12 @@ h1 span {
 
 .type-animation {
   
-  color: #00818a;
+  color: #004d80;
   font-weight: bold!important;
   font-family: "Anonymous Pro", monospace!important;
   letter-spacing: 7px!important;
   overflow: hidden;
-  border-right: 2px solid hsl(0, 100%, 50%);
+  border-right: 2px solid hsl(0, 0%, 0%);
   white-space: nowrap;
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms infinite;

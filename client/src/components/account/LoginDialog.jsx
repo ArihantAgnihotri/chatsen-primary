@@ -27,18 +27,9 @@ const Title = styled(Typography)`
     font-size: 26px;
     margin-bottom: 25px;
     color: #525252;
+
     font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
     font-weight: 300;
-`;
-
-const StyledList = styled(List)`
-    &  > li {
-        padding: 0;
-        margin-top: 15px;
-        font-size: 18px;
-        line-height: 28px;
-        color: #4a4a4a;
-    }
 `;
 
 const dialogStyle = {
@@ -97,7 +88,7 @@ const LoginDialog = () => {
             <Box style={{ position: 'absolute', top : '60%', left : '35%'}}>
                     
                         <GoogleLogin
-                            buttonText=""
+                            buttonText="Google Login"
                             onSuccess={onLoginSuccess}
                             onError={onLoginFailure}
 

@@ -19,12 +19,12 @@ const BoxWrapper = styled(Box)`
     background: #FFFFFF;
     padding: 12px 30px 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    & :first-child {
+    & :nth-child(1) {
         font-size: 13px;
-        color: #009688;
-        font-weight: 200;
+        color: #004d80;
+        font-weight: 400;
     };
-    & :last-child {
+    & :nth-child(2) {
         margin: 14px 0;
         color: #4A4A4A;
     }
@@ -52,7 +52,7 @@ const Profile = () => {
                 <Typography>{account.name}</Typography>
             </BoxWrapper>
             <DescriptionContainer>
-                <Typography>This is not your username or pin. This name will be visible to your WhatsApp contacts.</Typography>
+                <Typography>This is your name as per your google ID. This name will be visible to your contacts.</Typography>
             </DescriptionContainer>
             <BoxWrapper>
                 <Typography>About</Typography>

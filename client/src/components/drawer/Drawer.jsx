@@ -5,7 +5,7 @@ import { ArrowBack } from '@mui/icons-material';
 import Profile from './Profile';
 
 const Header = styled(Box)`
-  background: #008069;
+  background: #004d80;
   height: 107px;
   color: #FFFFFF;
   display: flex;
