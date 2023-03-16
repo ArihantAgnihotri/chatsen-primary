@@ -11,7 +11,9 @@ import Message from './Message';
 import Footer from './Footer';
 
 const Wrapper = styled(Box)`
-    background-image: url(${'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'});
+    ${'' /* background-image: url(${'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'});
+     */}
+     background-image: url(${'https://gachi.gay/lcJBw'});
     background-size: 50%;
 `;
 

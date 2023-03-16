@@ -24,7 +24,9 @@ const Title = styled(Typography)`
     font-family: inherit;
     font-weight: 300;
     color: #41525d;
-    margin-top: 25px 0 10px 0;
+    position : relative;
+    right : 6%;
+    margin: 25px 0 10px 0;
 `;
 
 const SubTitle = styled(Typography)`
@@ -45,9 +47,9 @@ const EmptyChat = () => {
         <Component>
             <Container>
                 <Image src={emptyChatImage} alt="empty" />
-                <Title>WhatsApp Web</Title>
-                <SubTitle>Now send and receive messages without keeping your phone online.</SubTitle>
-                <SubTitle>Use WhatsApp on up to 4 linked devices and 1 phone at the same time. </SubTitle>
+                <Title className='type-animation'>CHATSEN</Title>
+                <SubTitle>A Secure and Easy to use Chat Application</SubTitle>
+                <SubTitle>Chat away...</SubTitle>
                 <StyledDivider />
             </Container>
         </Component>
