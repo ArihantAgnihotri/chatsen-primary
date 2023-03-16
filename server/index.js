@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
 import Connection from './database/db.js';
 import Routes from './routes/Routes.js';
 

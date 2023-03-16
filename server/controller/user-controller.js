@@ -6,15 +6,15 @@ export const addUser = async (request, response) => {
         let exist = await User.findOne({ sub: request.body.sub });
 
         if(exist) {
-            response.status(200).json('user already exists');
+            response.status(200).json({msg: 'user already exists'});
             return;
         }
 
         const newUser = new User(request.body);
         await newUser.save();
-        response.status(200).json(newUser);
+        return response.status(200).json(newUser);
     } catch (error) {
-        response.status(500).json(error);
+        return response.status(500).json(error);
     }
 }
 
