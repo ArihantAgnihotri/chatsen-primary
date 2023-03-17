@@ -34,7 +34,7 @@ const InputField = styled(InputBase)`
 `;
 
 const ClipIcon = styled(AttachFile)`
-    transform: 'rotate(40deg)'
+    transform: rotate(40deg);
 `;
 
 
