@@ -30,7 +30,7 @@ const Conversations = ({ text }) => {
             let filteredData = data.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
             setUsers(filteredData);
         }
-        fetchData();
+        fetchData(); 
     }, [text]);
 
     useEffect(() => {

@@ -46,9 +46,8 @@ const Conversation = ({ user }) => {
     
     const { setPerson } = useContext(UserContext);
     const { account, newMessageFlag }  = useContext(AccountContext);
-
     const [message, setMessage] = useState({});
-
+    const truncatedMessage ="";
     useEffect(() => {
         const getConversationMessage = async() => {
             const data = await getConversation({ senderId: account.sub, receiverId: user.sub });
@@ -76,7 +75,7 @@ const Conversation = ({ user }) => {
                     }
                 </Container>
                 <Box>
-                    <Text>{message?.text?.includes('localhost') ? 'media' : message.text}</Text>
+                    <Text>{message?.text?.includes('localhost') ? 'media' : message.text.length >=50 ? message.text.substring(0,50)+'...' : message.text}</Text>
                 </Box>
             </Box>
         </Component>
