@@ -16,7 +16,7 @@ const Wrapper = styled(Box)`
     display: flex;
     border-radius: 10px;
     word-break: break-word;
-    box-shadow: 3px 5px  rgba(0,77,128,0.5);
+    box-shadow: 5px 5px  rgba(30,30,30,0.5);
 `;
     
 const Own = styled(Box)`
@@ -28,7 +28,7 @@ const Own = styled(Box)`
     display: flex;
     border-radius: 10px;
     word-break: break-word;
-    box-shadow: 3px 5px  rgba(0,77,128,0.5);
+    box-shadow: 5px 5px  rgba(0,77,128,0.5);
 `;
 
 const Text = styled(Typography)`
