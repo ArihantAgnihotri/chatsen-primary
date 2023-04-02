@@ -16,10 +16,11 @@ const Wrapper = styled(Box)`
     display: flex;
     border-radius: 10px;
     word-break: break-word;
+    box-shadow: 3px 5px  rgba(0,77,128,0.5);
 `;
     
 const Own = styled(Box)`
-    background: #dcf8c6;
+    background: #c3daf7;
     padding: 5px;
     max-width: 60%;
     width: fit-content;
@@ -27,6 +28,7 @@ const Own = styled(Box)`
     display: flex;
     border-radius: 10px;
     word-break: break-word;
+    box-shadow: 3px 5px  rgba(0,77,128,0.5);
 `;
 
 const Text = styled(Typography)`
