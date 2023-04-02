@@ -68,14 +68,15 @@ const Conversation = ({ user }) => {
             </Box>
             <Box style={{width: '100%'}}>
                 <Container>
-                    <Typography>{user.name}</Typography>
+                    <Typography>{user.name.length>=50?user.name.substring(0,40)+'...':user.name}</Typography>
                     { 
                         message?.text && 
                         <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
                     }
                 </Container>
                 <Box>
-                    <Text>{message?.text?.includes('localhost') ? 'media' : message.text.length >=50 ? message.text.substring(0,50)+'...' : message.text}</Text>
+                    <Text>{message?.text?.includes('localhost') ? 'media' : message?.text?.length >=50 ? message.text.substring(0,50)+'...' : message.text}</Text>
+                    {/* <Text>{message?.text?.includes('localhost') ? 'media' : message.text}</Text> */}
                 </Box>
             </Box>
         </Component>
