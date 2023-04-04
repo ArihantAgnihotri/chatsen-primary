@@ -47,7 +47,6 @@ const Conversation = ({ user }) => {
     const { setPerson } = useContext(UserContext);
     const { account, newMessageFlag }  = useContext(AccountContext);
     const [message, setMessage] = useState({});
-    const truncatedMessage ="";
     useEffect(() => {
         const getConversationMessage = async() => {
             const data = await getConversation({ senderId: account.sub, receiverId: user.sub });
@@ -62,13 +61,13 @@ const Conversation = ({ user }) => {
     }
 
     return (
-        <Component onClick={() => getUser()}>
+        <Component onClick={() => getUser()} onMouseEnter={(e)=>e.target.style.boxShadow = '1px 2px 9px #b1aaf4' } onMouseLeave={(e)=>e.target.style.boxShadow = 'none' }>
             <Box>
                 <Image src={url} alt="display picture" />
             </Box>
             <Box style={{width: '100%'}}>
                 <Container>
-                    <Typography>{user.name.length>=50?user.name.substring(0,40)+'...':user.name}</Typography>
+                    <Typography>{user?.name?.length>=50?user.name.substring(0,40)+'...':user.name}</Typography>
                     { 
                         message?.text && 
                         <Timestamp>{formatDate(message?.timestamp)}</Timestamp>        
@@ -76,7 +75,7 @@ const Conversation = ({ user }) => {
                 </Container>
                 <Box>
                     <Text>{message?.text?.includes('localhost') ? 'media' : message?.text?.length >=50 ? message.text.substring(0,50)+'...' : message.text}</Text>
-                    {/* <Text>{message?.text?.includes('localhost') ? 'media' : message.text}</Text> */}
+         
                 </Box>
             </Box>
         </Component>
