@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
-import { EmojiEmotions, AttachFile, Mic } from '@mui/icons-material';
+import { EmojiEmotions, AttachFile} from '@mui/icons-material';
+import SendIcon from '@mui/icons-material/Send';
 import { Box, styled, InputBase } from '@mui/material';
 
 import { uploadFile } from '../../../service/api';
@@ -63,7 +64,7 @@ const Footer = ({ sendText, value, setValue, setFile, file, setImage }) => {
         <Container>
             <EmojiEmotions />
             <label htmlFor="fileInput">
-                <ClipIcon />
+                <ClipIcon onMouseEnter={(e)=>e.target.style.cursor = 'pointer' } onMouseLeave={(e)=>e.target.style.cursor = 'default'} />
             </label>
             <input
                 type='file'
@@ -81,7 +82,7 @@ const Footer = ({ sendText, value, setValue, setFile, file, setImage }) => {
                     value={value}
                 />
             </Search>
-            <Mic />
+            <SendIcon onMouseEnter={(e)=>e.target.style.cursor = 'pointer' } onMouseLeave={(e)=>e.target.style.cursor = 'default'}/>
         </Container>
     )
 }
