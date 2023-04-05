@@ -13,9 +13,7 @@ export const downloadMedia = async (e, originalImage) => {
 
             const nameSplit = originalImage.split("/");
             const duplicateName = nameSplit.pop();
-
-            // the filename you want
-            a.download = "" + duplicateName + "";
+            a.download = "chatsen-download-" + duplicateName + "";
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
