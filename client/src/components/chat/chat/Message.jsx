@@ -93,9 +93,11 @@ const ImageMessage = ({ message }) => {
             }
             <Time style={{ position: 'absolute', bottom: 0, right: 0 }}>
                 <GetAppIcon 
+                    onMouseEnter={(e)=>e.target.style.cursor = 'pointer' }
+                    onMouseLeave={(e)=>e.target.style.cursor = 'default'}
                     onClick={(e) => downloadMedia(e, message.text)} 
                     fontSize='small' 
-                    style={{ marginRight: 10, border: '1px solid grey', borderRadius: '50%' }} 
+                    style={{ marginRight: 10, color : 'black', border: '1px solid black', borderRadius: '50%' }} 
                 />
                 {formatDate(message.createdAt)}
             </Time>
